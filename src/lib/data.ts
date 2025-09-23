@@ -41,5 +41,5 @@ export const navLinks: NavLink[] = [
     { href: '/#women', label: 'Women' },
     { href: '/#men', label: 'Men' },
     { href: '/#shoes', label: 'Shoes' },
-    { href: '/#sustainable', label: 'Sustainable' },
+    { href: '/sustainability', label: 'Sustainability' },
   ];
