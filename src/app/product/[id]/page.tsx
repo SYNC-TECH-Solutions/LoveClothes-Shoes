@@ -100,17 +100,20 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
             </div>
 
             {/* Color Selector */}
-            <div>
-                <h3 className="text-sm font-semibold mb-2">Color</h3>
-                <div className="flex flex-wrap gap-3">
-                    {product.colors?.map((color) => (
-                    <button key={color} className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
-                        style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}>
-                        <span className="sr-only">{color}</span>
-                    </button>
-                    ))}
-                </div>
-            </div>
+            {product.colors && product.colors.length > 0 && (
+              <div>
+                  <h3 className="text-sm font-semibold mb-2">Color</h3>
+                  <div className="flex flex-wrap gap-3">
+                      {product.colors.map((color) => (
+                      <button key={color} className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
+                          style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}>
+                          <span className="sr-only">{color}</span>
+                      </button>
+                      ))}
+                  </div>
+              </div>
+            )}
+
 
             <Button size="lg" className="w-full">Add to Cart</Button>
             
