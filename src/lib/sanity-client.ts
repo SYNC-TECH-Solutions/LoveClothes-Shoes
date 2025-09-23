@@ -48,5 +48,10 @@ export async function getProductById(id: string) {
     "hoverImageHint": hoverImage.alt,
     "imageUrls": images[].asset->{ "url": url, "hint": alt }
   }`, { id });
+
+  if (!product) {
+    return null;
+  }
+  
   return {...product, id: product._id};
 }
