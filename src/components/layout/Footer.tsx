@@ -135,7 +135,7 @@ export function Footer() {
       </div>
       <div className="container max-w-7xl mt-8 pt-8 border-t border-border/40 text-center text-sm text-foreground/60">
         <p>&copy; {new Date().getFullYear()} Love Clothes & Shoes. All rights reserved.</p>
-        <p>Built by <a href="https://www.synctech.ie" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">SYNC TECH</a></p>
+        <p>Built by <a href="https://www.synctech.ie" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline"><strong>SYNC TECH</strong></a></p>
       </div>
     </footer>
   );
