@@ -13,8 +13,12 @@ export default async function Recommendations() {
     });
 
     if (result.recommendations) {
-      const recommendedIds = result.recommendations.split(',').map((id) => id.trim());
-      recommendedProducts = products.filter((p) => recommendedIds.includes(p.id));
+      const recommendedIds = result.recommendations
+        .split(',')
+        .map(id => id.trim());
+      recommendedProducts = products.filter(p =>
+        recommendedIds.includes(p.id)
+      );
     }
   } catch (error) {
     console.error('Error fetching product recommendations:', error);
@@ -22,8 +26,8 @@ export default async function Recommendations() {
     recommendedProducts = products.slice(0, 4);
   }
 
-  // Ensure we have something to show
-  if(recommendedProducts.length === 0) {
+  // Ensure we have something to show, but not more than 4
+  if (recommendedProducts.length === 0) {
     recommendedProducts = products.slice(0, 4);
   }
 
@@ -38,7 +42,7 @@ export default async function Recommendations() {
             AI-powered picks based on your style.
           </p>
         </div>
-        <ProductGrid products={recommendedProducts} />
+        <ProductGrid products={recommendedProducts.slice(0, 4)} />
       </div>
     </section>
   );

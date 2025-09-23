@@ -4,9 +4,28 @@ import { categories } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import { products } from '@/lib/data';
+
+function getCategoryImage(categoryName: string) {
+  // Find a product in that category
+  const productInCategory = products.find(
+    p => p.category.toLowerCase() === categoryName.toLowerCase()
+  );
+  if (productInCategory && productInCategory.images.length > 0) {
+    // Find the placeholder image for that product
+    return PlaceHolderImages.find(img => img.id === productInCategory.images[0]);
+  }
+  // Fallback to a generic category image if no product is found
+  return PlaceHolderImages.find(img => img.id.startsWith('category-'));
+}
+
 
 export default function FeaturedCategories() {
-  const displayedCategories = categories.slice(0, 3); // Show first 3 categories
+  const displayedCategories = [
+    { name: 'Dresses' },
+    { name: 'Shoes' },
+    { name: 'T-Shirts' },
+  ]; 
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
@@ -22,9 +41,7 @@ export default function FeaturedCategories() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {displayedCategories.map((category) => {
-            const image = PlaceHolderImages.find(
-              (img) => img.id === category.image
-            );
+            const image = getCategoryImage(category.name);
             return (
               <Link href="#" key={category.name}>
                 <Card className="group relative h-96 overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-2xl">
