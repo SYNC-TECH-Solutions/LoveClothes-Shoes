@@ -8,6 +8,7 @@ import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
 import { subscribeToNewsletter } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
@@ -15,19 +16,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 const newsletterFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }),
 });
-
-function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            {...props}
-        >
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.01 1.59-.02 3.18-.01 4.77-1.13 1.02-2.34 1.96-3.64 2.81-.05 1.84-.06 3.68-.04 5.53l-4.11-.01c.02-1.84.01-3.68.04-5.52-1.31-.87-2.58-1.8-3.8-2.79-.01 1.55.01 3.1-.01 4.65l-4.11-.01c.02-1.83.01-3.67.04-5.51 1.32-.86 2.58-1.78 3.82-2.75.02-1.56.01-3.12.01-4.67-1.47.64-2.99.94-4.56 1.01v-4.03c1.44-.17 2.87-.67 4.1-1.65.78-1.21 1.25-2.64 1.4-4.16.09-.08.18-.17.27-.25z" />
-        </svg>
-    )
-}
 
 export function Footer() {
   const { toast } = useToast();
@@ -66,7 +54,7 @@ export function Footer() {
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" asChild>
                 <Link href="#">
-                    <TikTokIcon className="h-5 w-5" />
+                    <FaTiktok className="h-5 w-5" />
                     <span className="sr-only">TikTok</span>
                 </Link>
             </Button>
