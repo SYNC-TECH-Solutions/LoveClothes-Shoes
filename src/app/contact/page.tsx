@@ -9,6 +9,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MessageSquare, User } from 'lucide-react';
+import type { Metadata } from 'next';
+import { Card } from '@/components/ui/card';
+
+// Note: Metadata export is not actively used in a 'use client' component,
+// but it's good practice for static analysis and future compatibility.
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Get in touch with the Love Clothes & Shoes team. We\'d love to hear from you with questions, comments, or collaboration ideas.',
+};
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -104,5 +113,3 @@ export default function ContactPage() {
     </div>
   );
 }
-// Need to add a Card component for styling
-import { Card } from '@/components/ui/card';

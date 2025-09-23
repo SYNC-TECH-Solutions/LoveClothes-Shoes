@@ -3,18 +3,18 @@ import { Truck, Package, Leaf } from 'lucide-react';
 const valueProps = [
   {
     icon: Truck,
-    title: 'Free Shipping',
-    description: 'On all orders over $75. Get your style delivered fast.',
+    title: 'Fast Shipping',
+    description: 'Our partners offer fast and reliable shipping, with free options on many orders over $75.',
   },
   {
     icon: Package,
     title: 'Easy Returns',
-    description: "Not the perfect fit? No problem. We offer hassle-free returns.",
+    description: "Not the perfect fit? No problem. Our partner brands offer hassle-free return policies.",
   },
   {
     icon: Leaf,
-    title: 'Sustainable Practices',
-    description: 'We are committed to eco-friendly materials and ethical production.',
+    title: 'Sustainable Choices',
+    description: 'We prioritize featuring products made from eco-friendly materials and ethical production methods.',
   },
 ];
 

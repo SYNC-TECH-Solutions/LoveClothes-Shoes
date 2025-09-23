@@ -10,6 +10,35 @@ import Recommendations from '@/components/home/Recommendations';
 import type { Product } from '@/lib/types';
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/hooks/use-toast';
+import type { Metadata } from 'next';
+
+// Although this is a client component, this function can be used by Next.js
+// to generate metadata for the page.
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const product = await getProductById(params.id);
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+    };
+  }
+
+  return {
+    title: product.name,
+    description: product.description,
+    openGraph: {
+      images: [
+        {
+          url: product.mainImageUrl,
+          width: 800,
+          height: 600,
+          alt: product.name,
+        },
+      ],
+    },
+  };
+}
+
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<Product | null>(null);
@@ -85,30 +114,32 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 />
               )}
             </div>
-            <div className="grid grid-cols-3 gap-4">
-              {product.imageUrls?.slice(0, 3).map((image, index) => {
-                return (
-                  image && (
-                    <div key={index} className="relative aspect-square w-full overflow-hidden rounded-lg border">
-                      <Image
-                        src={image.url}
-                        alt={`${product.name} - view ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={image.hint}
-                        sizes="33vw"
-                      />
-                    </div>
-                  )
-                );
-              })}
-            </div>
+             {product.imageUrls && product.imageUrls.length > 0 && (
+                <div className="grid grid-cols-3 gap-4">
+                {product.imageUrls.slice(0, 3).map((image, index) => {
+                    return (
+                    image && (
+                        <div key={index} className="relative aspect-square w-full overflow-hidden rounded-lg border">
+                        <Image
+                            src={image.url}
+                            alt={`${product.name} - view ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={image.hint}
+                            sizes="33vw"
+                        />
+                        </div>
+                    )
+                    );
+                })}
+                </div>
+            )}
           </div>
 
           {/* Product Details */}
           <div className="flex flex-col gap-6">
             <div>
-              <p className="text-sm font-medium text-primary">{product.brand}</p>
+              {product.brand && <p className="text-sm font-medium text-primary">{product.brand}</p>}
               <h1 className="font-headline text-3xl md:text-4xl font-bold mt-1">{product.name}</h1>
               <div className="mt-4 flex items-center gap-4">
                 <div className="flex items-center gap-1">
@@ -119,7 +150,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     />
                   ))}
                 </div>
-                <span className="text-sm text-foreground/60">({product.reviews} reviews)</span>
+                {product.reviews > 0 && <span className="text-sm text-foreground/60">({product.reviews} reviews)</span>}
               </div>
             </div>
 
@@ -138,22 +169,25 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             </div>
 
             {/* Size Selector */}
-            <div>
-              <h3 className="text-sm font-semibold mb-2">Size</h3>
-              <div className="flex flex-wrap gap-2">
-                {product.sizes?.map((size) => (
-                  <Button 
-                    key={size} 
-                    variant={selectedSize === size ? "default" : "outline"} 
-                    size="sm" 
-                    className="w-16"
-                    onClick={() => setSelectedSize(size)}
-                  >
-                    {size}
-                  </Button>
-                ))}
+             {product.sizes && product.sizes.length > 0 && (
+              <div>
+                <h3 className="text-sm font-semibold mb-2">Size</h3>
+                <div className="flex flex-wrap gap-2">
+                  {product.sizes?.map((size) => (
+                    <Button 
+                      key={size} 
+                      variant={selectedSize === size ? "default" : "outline"} 
+                      size="sm" 
+                      className="w-16"
+                      onClick={() => setSelectedSize(size)}
+                    >
+                      {size}
+                    </Button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
+
 
             {/* Color Selector */}
             {product.colors && product.colors.length > 0 && (
@@ -165,6 +199,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                         key={color} 
                         className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
                         style={{ backgroundColor: color.toLowerCase().replace(/\s/g, '') }}
+                        title={color}
                       >
                           <span className="sr-only">{color}</span>
                       </button>
@@ -178,7 +213,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             
             <div className="flex items-center gap-3 text-sm text-foreground/60 border-t pt-6">
                 <Truck className="h-5 w-5" />
-                <span>Free shipping on orders over $75</span>
+                <span>Free shipping on many orders over $75 via our partners.</span>
             </div>
           </div>
         </div>

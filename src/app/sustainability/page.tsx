@@ -1,5 +1,11 @@
 import { Leaf, Recycle, Globe } from 'lucide-react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sustainability',
+  description: 'Our commitment to a greener future. Learn how we promote eco-friendly materials, ethical production, and conscious consumerism.',
+};
 
 export default function SustainabilityPage() {
   return (
@@ -30,7 +36,7 @@ export default function SustainabilityPage() {
               </div>
               <div>
                 <h3 className="text-xl font-headline font-semibold">Eco-Friendly Materials</h3>
-                <p className="text-foreground/70">We prioritize products made from sustainable materials like organic cotton, linen, Tencel, and recycled fabrics. These materials reduce water consumption, pesticide use, and waste.</p>
+                <p className="text-foreground/70">We champion products made from sustainable materials like organic cotton, linen, Tencel, and recycled fabrics. By choosing these, we collectively help reduce water consumption, pesticide use, and waste in the fashion industry.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -39,7 +45,7 @@ export default function SustainabilityPage() {
               </div>
               <div>
                 <h3 className="text-xl font-headline font-semibold">Ethical Production</h3>
-                <p className="text-foreground/70">We partner with brands that are transparent about their supply chains and ensure fair labor practices, safe working conditions, and living wages for their workers.</p>
+                <p className="text-foreground/70">We partner with brands that are transparent about their supply chains and ensure fair labor practices, safe working conditions, and living wages for their workers. We believe great style shouldn't come at a human cost.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -47,8 +53,8 @@ export default function SustainabilityPage() {
                 <Globe className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-headline font-semibold">Reducing Our Footprint</h3>
-                <p className="text-foreground/70">From eco-friendly packaging to carbon-neutral shipping options, we are continuously seeking ways to minimize our environmental impact at every step of the process.</p>
+                <h3 className="text-xl font-headline font-semibold">Conscious Curation</h3>
+                <p className="text-foreground/70">As an affiliate platform, our power lies in choosing which brands to feature. We are committed to highlighting brands that are making a real effort to reduce their environmental footprint and promote a more circular economy in fashion.</p>
               </div>
             </div>
           </div>
@@ -57,7 +63,7 @@ export default function SustainabilityPage() {
         <div className="text-center">
             <h2 className="font-headline text-3xl font-bold">Join Us on Our Journey</h2>
             <p className="mt-3 max-w-2xl mx-auto text-foreground/70">
-                Every purchase you make through our affiliate links supports a move towards a more sustainable fashion industry. Thank you for being a part of the change.
+                Every purchase you make through our affiliate links sends a message to the industry that you support a more sustainable future for fashion. Thank you for being a part of the change.
             </p>
         </div>
       </div>

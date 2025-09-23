@@ -1,4 +1,10 @@
 import { Truck } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Shipping Information',
+    description: 'Learn how shipping works on our affiliate platform. All shipping is handled directly by our partner brands.',
+};
 
 export default function ShippingPage() {
   return (

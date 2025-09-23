@@ -1,4 +1,10 @@
 import { PackageOpen } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Returns & Exchanges',
+    description: 'Our policy on returns and exchanges. All returns are handled directly by the partner brand from which you made your purchase.',
+};
 
 export default function ReturnsPage() {
   return (
@@ -30,7 +36,7 @@ export default function ReturnsPage() {
           
           <h2>Refunds</h2>
           <p>
-            Once the partner brand receives and processes your return, they will issue a refund to your original form of payment. The processing time for refunds can vary.
+            Once the partner brand receives and processes your return, they will issue a refund to your original form of payment. The processing time for refunds can vary. Please contact the brand's customer service for any questions regarding your refund status.
           </p>
 
            <h2>Need Help?</h2>

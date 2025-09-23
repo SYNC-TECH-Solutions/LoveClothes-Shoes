@@ -6,9 +6,12 @@ import { Toaster } from "@/components/ui/toaster"
 import { CartProvider } from '@/context/CartContext';
 
 export const metadata: Metadata = {
-  title: 'Love Clothes & Shoes | Your Destination for Trendy & Sustainable Fashion',
+  title: {
+    default: 'Love Clothes & Shoes | Your Destination for Trendy & Sustainable Fashion',
+    template: '%s | Love Clothes & Shoes',
+  },
   description:
-    'Shop the latest trends in clothes and shoes for men and women. Discover our collection of sustainable fashion, stylish footwear, and colorful apparel. Free shipping on all orders over $75.',
+    'Shop the latest trends in clothes and shoes for men and women. Discover our collection of sustainable fashion, stylish footwear, and colorful apparel. As an affiliate site, we earn from qualifying purchases.',
 };
 
 export default function RootLayout({

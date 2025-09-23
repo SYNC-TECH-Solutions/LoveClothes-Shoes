@@ -1,5 +1,11 @@
 import { Newspaper } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Press',
+    description: 'See what the media is saying about Love Clothes & Shoes and our unique approach to curated, sustainable fashion.',
+};
 
 const pressMentions = [
     {

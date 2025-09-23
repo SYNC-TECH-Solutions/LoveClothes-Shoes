@@ -1,5 +1,12 @@
 import { Users, Target, Eye } from 'lucide-react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about the mission, vision, and community behind Love Clothes & Shoes. Your curated guide to the best in style and conscious shopping.',
+};
+
 
 export default function AboutPage() {
   return (
@@ -12,7 +19,7 @@ export default function AboutPage() {
               Welcome to Love Clothes & Shoes, your curated destination for the latest trends and timeless styles in fashion. We believe that what you wear is a powerful form of self-expression, and our mission is to bring you pieces that make you feel confident, stylish, and true to yourself.
             </p>
             <p className="text-md text-foreground/60 italic">
-              <strong>Affiliate Disclosure:</strong> Please note that Love Clothes & Shoes is an affiliate marketing website. This means we earn a commission on qualifying purchases made through the links on our site, at no extra cost to you. We hand-pick and feature products we genuinely love and believe you will too.
+              <strong>Affiliate Disclosure:</strong> Please note that Love Clothes & Shoes is an affiliate marketing website. This means we earn a commission on qualifying purchases made through the links on our site, at no extra cost to you. We hand-pick and feature products we genuinely love and believe you will too. Your support helps us continue our mission of curating the best in fashion.
             </p>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg">

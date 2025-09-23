@@ -1,5 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Briefcase } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Careers',
+    description: 'Join our team! Explore career opportunities at Love Clothes & Shoes and help us change the way people discover and shop for style.',
+};
 
 export default function CareersPage() {
   return (

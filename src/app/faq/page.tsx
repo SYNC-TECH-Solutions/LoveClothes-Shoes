@@ -5,15 +5,21 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { HelpCircle } from "lucide-react";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Frequently Asked Questions',
+    description: 'Find answers to common questions about our affiliate model, shipping, returns, and how we select our products.',
+};
 
 const faqItems = [
     {
         question: "What is an affiliate website?",
-        answer: "An affiliate website, like ours, partners with brands to feature their products. When you click a link on our site and make a purchase, we earn a small commission from the brand at no extra cost to you. It's a way for you to support our curation efforts while shopping for styles you love."
+        answer: "An affiliate website, like ours, partners with brands to feature their products. When you click a link on our site and make a purchase from the partner brand, we earn a small commission at no extra cost to you. It's a way for you to support our curation efforts while shopping for styles you love."
     },
     {
         question: "Are the prices on your site the final prices?",
-        answer: "The prices displayed on our site are provided by our partner brands and are updated regularly. However, the final price is always the one you see on the partner brand's website at checkout. Prices and availability are subject to change."
+        answer: "The prices displayed on our site are provided by our partner brands and are updated regularly. However, the final price is always the one you see on the partner brand's website at checkout. Prices, discounts, and availability are subject to change without notice."
     },
     {
         question: "How do shipping and returns work?",
@@ -21,11 +27,11 @@ const faqItems = [
     },
     {
         question: "How do you choose the products you feature?",
-        answer: "Our team of stylists and fashion enthusiasts carefully curates every item on our site. We look for high-quality, stylish, and sustainable products from brands we trust. Our goal is to bring you a collection of items that we would wear and recommend ourselves."
+        answer: "Our team of stylists and fashion enthusiasts carefully curates every item on our site. We look for high-quality, stylish, and sustainable products from brands we trust and admire. Our goal is to bring you a collection of items that we would wear and recommend ourselves."
     },
     {
-        question: "Do you hold any inventory?",
-        answer: "No, we do not hold any inventory ourselves. We are purely a curation and discovery platform. All transactions and fulfillment are managed by our partner brands."
+        question: "Do you hold any inventory or handle payments?",
+        answer: "No, we do not hold any inventory or process any payments ourselves. We are purely a curation and discovery platform. All transactions and fulfillment are securely managed by our trusted partner brands."
     }
 ]
 
