@@ -137,4 +137,186 @@ export const posts = [
             },
         ],
     },
+    {
+        _id: 'accessorize-like-a-pro',
+        _type: 'post',
+        title: 'How to Accessorize: 5 Tips to Elevate Any Outfit',
+        slug: { _type: 'slug', current: 'accessorize-like-a-pro' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A collection of stylish accessories including a watch, sunglasses, and a necklace on a flat surface.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-07-12T10:00:00Z',
+        excerpt: 'Accessories are the secret weapon of any stylish person. Learn how to use jewelry, bags, and scarves to transform your look from simple to stunning.',
+        seoTitle: 'How to Accessorize Like a Pro | 5 Easy Tips',
+        seoDescription: 'Elevate your style with our top 5 accessory tips. Learn how to choose the right jewelry, bags, and more to perfectly complement your outfits.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro4',
+                children: [{ _type: 'span', text: 'Accessories are more than just an afterthought; they are the key to defining your personal style. A simple outfit can be completely transformed with the right additions. Here are five tips to help you master the art of accessorizing.' }],
+            },
+        ],
+    },
+    {
+        _id: 'investment-pieces',
+        _type: 'post',
+        title: '5 Wardrobe Investment Pieces That Are Always Worth It',
+        slug: { _type: 'slug', current: 'investment-pieces' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A classic leather jacket hanging on a rack.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-07-10T10:00:00Z',
+        excerpt: 'Tired of fast fashion? Discover five timeless pieces—from the perfect leather jacket to a classic trench coat—that will serve you for years to come.',
+        seoTitle: '5 Timeless Wardrobe Investment Pieces | Quality Fashion',
+        seoDescription: 'Build a wardrobe that lasts. We break down the 5 essential investment pieces that every stylish person should own. Quality over quantity.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro5',
+                children: [{ _type: 'span', text: 'In a world of fleeting trends, building a wardrobe of timeless investment pieces is the smartest style move you can make. These are the high-quality, versatile items that form the foundation of countless outfits. Here are five pieces worth the splurge.' }],
+            },
+        ],
+    },
+    {
+        _id: 'sneaker-care-101',
+        _type: 'post',
+        title: 'Sneaker Care 101: How to Keep Your Kicks Looking New',
+        slug: { _type: 'slug', current: 'sneaker-care-101' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A person carefully cleaning a white sneaker with a brush.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-07-08T10:00:00Z',
+        excerpt: 'You\'ve invested in a great pair of sneakers, now what? Our guide to sneaker care will show you how to clean, protect, and store your favorite shoes to keep them fresh.',
+        seoTitle: 'How to Clean Your Sneakers | Sneaker Care 101',
+        seoDescription: 'Keep your favorite sneakers looking brand new with our expert care guide. Learn the best techniques for cleaning, protecting, and storing your shoes.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro6',
+                children: [{ _type: 'span', text: 'A fresh pair of sneakers can make any outfit, but keeping them clean is a challenge. With the right techniques and products, you can extend the life of your favorite kicks and keep them looking box-fresh for years. Here’s how.' }],
+            },
+        ],
+    },
+    {
+        _id: 'monochromatic-dressing',
+        _type: 'post',
+        title: 'Mastering Monochromatic: A Guide to Tonal Dressing',
+        slug: { _type: 'slug', current: 'monochromatic-dressing' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A person wearing a stylish all-beige outfit.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-07-05T10:00:00Z',
+        excerpt: 'Dressing in a single color from head to toe is a chic and effortless way to make a statement. Learn the secrets to mastering monochromatic looks for any season.',
+        seoTitle: 'How to Master Monochromatic Dressing | Tonal Outfits',
+        seoDescription: 'Learn how to wear one color head-to-toe with our guide to monochromatic dressing. Discover tips on mixing textures and shades for a chic, sophisticated look.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro7',
+                children: [{ _type: 'span', text: 'Monochromatic dressing—wearing different tones and shades of a single color—is one of the most sophisticated and easy ways to look put-together. It\'s a fashion editor favorite for a reason. Here’s how to get it right.' }],
+            },
+        ],
+    },
+    {
+        _id: 'ethical-fashion-brands',
+        _type: 'post',
+        title: '10 Ethical Fashion Brands That Are Changing the Industry',
+        slug: { _type: 'slug', current: 'ethical-fashion-brands' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A clothing tag that says "Made with love and recycled materials".',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-07-02T10:00:00Z',
+        excerpt: 'Looking to support brands that do good? We\'re highlighting 10 ethical and sustainable fashion brands that prioritize fair labor and eco-friendly practices.',
+        seoTitle: '10 Ethical & Sustainable Fashion Brands to Support Now',
+        seoDescription: 'Vote with your wallet. Discover 10 amazing fashion brands committed to ethical production, sustainable materials, and making a positive impact.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro8',
+                children: [{ _type: 'span', text: 'Supporting ethical fashion brands is a powerful way to advocate for a better industry. These companies are committed to transparency, fair wages, and environmentally-friendly practices. Here are ten brands leading the charge.' }],
+            },
+        ],
+    },
+    {
+        _id: 'work-from-home-style',
+        _type: 'post',
+        title: 'The New WFH Style: Look Good, Feel Comfortable',
+        slug: { _type: 'slug', current: 'work-from-home-style' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A person sitting at a desk in a comfortable but stylish sweater.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-06-29T10:00:00Z',
+        excerpt: 'Working from home doesn\'t mean sacrificing style. We show you how to build a comfortable, polished, and video-call-ready wardrobe.',
+        seoTitle: 'Comfortable & Stylish Work From Home (WFH) Outfits',
+        seoDescription: 'Elevate your work-from-home look with our style guide. Find the perfect balance of comfort and professionalism with these WFH outfit ideas.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro9',
+                children: [{ _type: 'span', text: 'The age of remote work has changed how we dress. The goal is to be comfortable enough for your home office but polished enough for that surprise video call. It\'s a new category of style: "Zoom-appropriate comfort." Here’s how to nail it.' }],
+            },
+        ],
+    },
+    {
+        _id: 'capsule-wardrobe-101',
+        _type: 'post',
+        title: 'How to Build a Capsule Wardrobe: A 10-Piece Starter Guide',
+        slug: { _type: 'slug', current: 'capsule-wardrobe-101' },
+        mainImage: {
+            _type: 'image',
+            alt: 'A minimalist clothing rack with a few essential, neutral-colored garments.',
+             asset: {
+                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
+                _type: 'reference'
+            }
+        },
+        publishedAt: '2024-06-25T10:00:00Z',
+        excerpt: 'Simplify your life and your closet. A capsule wardrobe is a collection of essential items that can be mixed and matched. Here\'s how to start with just 10 pieces.',
+        seoTitle: 'How to Build a Capsule Wardrobe | 10-Piece Starter Guide',
+        seoDescription: 'Simplify your style with our guide to building a capsule wardrobe. Learn how to create a versatile, minimalist closet with just 10 essential pieces.',
+        body: [
+             {
+                _type: 'block',
+                style: 'normal',
+                _key: 'intro10',
+                children: [{ _type: 'span', text: 'A capsule wardrobe is the ultimate "less is more" fashion philosophy. It\'s a curated collection of versatile pieces that you love to wear. The benefits? Less decision fatigue, more sustainable choices, and a closet full of outfits you feel great in. Here is our 10-piece starter guide.' }],
+            },
+        ],
+    }
 ];

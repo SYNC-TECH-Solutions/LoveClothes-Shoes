@@ -27,29 +27,31 @@ export default async function BlogPage() {
                 {posts.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map(post => (
-                            <Link href={`/blog/${post.slug}`} key={post._id}>
-                                <Card className="group flex flex-col h-full overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-2xl">
-                                    {post.mainImageUrl && (
-                                        <div className="relative aspect-video w-full overflow-hidden">
-                                            <Image 
-                                                src={post.mainImageUrl}
-                                                alt={post.mainImageHint || post.title}
-                                                fill
-                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                            />
-                                        </div>
-                                    )}
-                                    <CardHeader>
-                                        <CardTitle className="font-headline text-2xl group-hover:text-primary transition-colors">{post.title}</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="flex-grow">
-                                        <CardDescription>{post.excerpt}</CardDescription>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <p className="text-sm text-foreground/60">{format(new Date(post.publishedAt), 'MMMM d, yyyy')}</p>
-                                    </CardFooter>
-                                </Card>
+                            <Link href={`/blog/${post.slug}`} key={post._id} legacyBehavior>
+                                <a className="group block">
+                                    <Card className="flex flex-col h-full overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+                                        {post.mainImageUrl && (
+                                            <div className="relative aspect-video w-full overflow-hidden">
+                                                <Image 
+                                                    src={post.mainImageUrl}
+                                                    alt={post.mainImageHint || post.title}
+                                                    fill
+                                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                                />
+                                            </div>
+                                        )}
+                                        <CardHeader>
+                                            <CardTitle className="font-headline text-2xl group-hover:text-primary transition-colors">{post.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="flex-grow">
+                                            <CardDescription>{post.excerpt}</CardDescription>
+                                        </CardContent>
+                                        <CardFooter>
+                                            <p className="text-sm text-foreground/60">{format(new Date(post.publishedAt), 'MMMM d, yyyy')}</p>
+                                        </CardFooter>
+                                    </Card>
+                                </a>
                             </Link>
                         ))}
                     </div>
