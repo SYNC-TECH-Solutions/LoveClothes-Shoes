@@ -1,3 +1,5 @@
+import type { PortableTextBlock } from "sanity";
+
 export type Product = {
   _id: string;
   id: string;
@@ -40,3 +42,16 @@ export type NavLink = {
   href: string;
   label: string;
 };
+
+export type Post = {
+    _id: string;
+    title: string;
+    slug: string;
+    mainImageUrl: string;
+    mainImageHint: string;
+    publishedAt: string;
+    excerpt: string;
+    body: PortableTextBlock[];
+    seoTitle?: string;
+    seoDescription?: string;
+}
