@@ -9,7 +9,7 @@ export function Logo() {
     >
       <div className="relative h-12 w-48 md:h-16 md:w-56">
         <Image
-          src="/logo.png"
+          src="/logowrite.png"
           alt="Love Clothes & Shoes Logo"
           fill
           className="object-contain"
