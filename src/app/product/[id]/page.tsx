@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const [selectedSize, setSelectedSize] = useState<string | null>(-1);
 
   useEffect(() => {
     async function fetchProduct() {
