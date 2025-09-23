@@ -47,7 +47,7 @@ export function Footer() {
     <footer className="w-full border-t border-border/40 bg-background/95 py-12">
       <div className="container grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
         <div className="flex flex-col gap-4 md:col-span-1">
-          <Logo variant="dark" />
+          <Logo variant="light" />
           <p className="text-sm text-foreground/60">
             Your curated guide to the best in style. We earn a commission on qualifying purchases.
           </p>
