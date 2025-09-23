@@ -13,7 +13,7 @@ export default function InstagramFeed() {
       <div className="container max-w-7xl">
         <div className="mb-8 text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tight">
-            #StyleHeart
+            #LoveClothesShoes
           </h2>
           <Link
             href="#"

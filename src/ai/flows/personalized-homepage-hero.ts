@@ -49,13 +49,14 @@ const prompt = ai.definePrompt({
   output: {
     schema: PersonalizedHomepageHeroOutputSchema,
   },
-  prompt: `You are an expert marketing copywriter for Style Heart, an online clothing and shoe store.
+  prompt: `You are an expert marketing copywriter for Love Clothes & Shoes, an online clothing and shoe store.
 
   Based on the user's preferences and the available product catalog, generate a captivating headline and select a relevant lifestyle image URL for the homepage hero section.
 
   User Preferences: {{{userPreferences}}}
   Product Catalog: {{{productCatalog}}}
 
+  The imageUrl should be a placeholder from 'https://picsum.photos/'.
   Ensure the headline is concise and engaging, and the image URL reflects the user's style and current trends.
   The headline and image should make the user feel excited and want to explore more.
 
@@ -74,4 +75,3 @@ const personalizedHomepageHeroFlow = ai.defineFlow(
     return output!;
   }
 );
-

@@ -31,8 +31,8 @@ export function Logo() {
           />
         </svg>
       </div>
-      <span className="font-headline text-2xl font-bold tracking-tight">
-        Style Heart
+      <span className="font-headline text-xl font-bold tracking-tight">
+        Love Clothes & Shoes
       </span>
     </Link>
   );

@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview Implements a visual search flow to find similar products in the Style Heart inventory.
+ * @fileOverview Implements a visual search flow to find similar products in the Love Clothes & Shoes inventory.
  *
  * - visualSearchForProducts - A function that takes an image data URI and searches for similar products.
  * - VisualSearchForProductsInput - The input type for the visualSearchForProducts function.
@@ -42,7 +42,7 @@ const visualSearchForProductsPrompt = ai.definePrompt({
   output: {schema: VisualSearchForProductsOutputSchema},
   prompt: `You are an AI assistant designed to find visually similar products in an online store.
 
-  Given an image of a clothing item, identify visually similar products from the Style Heart inventory.
+  Given an image of a clothing item, identify visually similar products from the Love Clothes & Shoes inventory.
   Return a list of product IDs that match the visual characteristics of the item in the image.
 
   Image: {{media url=photoDataUri}}

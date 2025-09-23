@@ -69,7 +69,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container max-w-7xl mt-8 pt-8 border-t border-border/40 text-center text-sm text-foreground/60">
-        <p>&copy; {new Date().getFullYear()} Style Heart. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Love Clothes & Shoes. All rights reserved.</p>
       </div>
     </footer>
   );

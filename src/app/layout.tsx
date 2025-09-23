@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Style Heart | Your Destination for Trendy & Sustainable Fashion',
+  title: 'Love Clothes & Shoes | Your Destination for Trendy & Sustainable Fashion',
   description:
     'Shop the latest trends in clothes and shoes for men and women. Discover our collection of sustainable fashion, stylish footwear, and colorful apparel. Free shipping on all orders over $75.',
 };
