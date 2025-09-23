@@ -56,7 +56,7 @@ const prompt = ai.definePrompt({
   User Preferences: {{{userPreferences}}}
   Product Catalog: {{{productCatalog}}}
 
-  The imageUrl should be a placeholder from 'https://picsum.photos/'.
+  The imageUrl MUST be a placeholder from 'https://picsum.photos/'. For example: 'https://picsum.photos/seed/1/1200/800'.
   Ensure the headline is concise and engaging, and the image URL reflects the user's style and current trends.
   The headline and image should make the user feel excited and want to explore more.
 
