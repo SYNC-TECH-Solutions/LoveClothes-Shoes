@@ -1,18 +1,68 @@
+'use client';
+import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getProductById } from '@/lib/sanity-client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Star, Truck } from 'lucide-react';
+import { Star, Truck, Loader2 } from 'lucide-react';
 import Recommendations from '@/components/home/Recommendations';
 import type { Product } from '@/lib/types';
+import { useCart } from '@/context/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
-export default async function ProductDetailPage({ params }: { params: { id: string } }) {
-  const product: Product = await getProductById(params.id);
+export default function ProductDetailPage({ params }: { params: { id: string } }) {
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const fetchedProduct = await getProductById(params.id);
+        if (!fetchedProduct) {
+          notFound();
+        } else {
+          setProduct(fetchedProduct);
+          if (fetchedProduct.sizes && fetchedProduct.sizes.length > 0) {
+            setSelectedSize(fetchedProduct.sizes[0]);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch product", error);
+        notFound();
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProduct();
+  }, [params.id]);
+  
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-96">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
 
   if (!product) {
-    notFound();
+    return notFound();
   }
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      toast({
+        variant: "destructive",
+        title: "Please select a size",
+        description: "You must choose a size before adding to the cart.",
+      });
+      return;
+    }
+    addToCart(product, selectedSize);
+  };
 
   const hasSale = product.salePrice && product.salePrice < product.price;
 
@@ -92,7 +142,13 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
               <h3 className="text-sm font-semibold mb-2">Size</h3>
               <div className="flex flex-wrap gap-2">
                 {product.sizes?.map((size) => (
-                  <Button key={size} variant="outline" size="sm" className="w-16">
+                  <Button 
+                    key={size} 
+                    variant={selectedSize === size ? "default" : "outline"} 
+                    size="sm" 
+                    className="w-16"
+                    onClick={() => setSelectedSize(size)}
+                  >
                     {size}
                   </Button>
                 ))}
@@ -105,8 +161,11 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
                   <h3 className="text-sm font-semibold mb-2">Color</h3>
                   <div className="flex flex-wrap gap-3">
                       {product.colors.map((color) => (
-                      <button key={color} className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
-                          style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}>
+                      <button 
+                        key={color} 
+                        className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
+                        style={{ backgroundColor: color.toLowerCase().replace(/\s/g, '') }}
+                      >
                           <span className="sr-only">{color}</span>
                       </button>
                       ))}
@@ -115,7 +174,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
             )}
 
 
-            <Button size="lg" className="w-full">Add to Cart</Button>
+            <Button size="lg" className="w-full" onClick={handleAddToCart}>Add to Cart</Button>
             
             <div className="flex items-center gap-3 text-sm text-foreground/60 border-t pt-6">
                 <Truck className="h-5 w-5" />

@@ -1,119 +1,7 @@
 
-import type { Product, Category, Testimonial } from '@/lib/types';
+import type { Product, Category, Testimonial, NavLink } from '@/lib/types';
 
-export const products: Product[] = [
-  {
-    id: '1',
-    name: 'Vibrant Summer Dress',
-    brand: 'EcoThreads',
-    category: 'dresses',
-    subcategory: "women's",
-    price: 59.99,
-    salePrice: 49.99,
-    sizes: ['XS', 'S', 'M', 'L'],
-    colors: ['Coral', 'Turquoise'],
-    description:
-      'A flowy, lightweight summer dress perfect for any occasion. Made from ethically sourced organic cotton.',
-    images: ['product-1-a', 'product-1-b', 'product-1-c'],
-    stock: 15,
-    rating: 4.5,
-    reviews: 120,
-  },
-  {
-    id: '2',
-    name: 'Colorful Kicks',
-    brand: 'SoleMates',
-    category: 'shoes',
-    subcategory: "women's",
-    price: 89.99,
-    sizes: ['6', '7', '8', '9', '10'],
-    colors: ['Lemon Yellow', 'Soft Lilac'],
-    description:
-      'Make a statement with these vibrant and comfortable sneakers. Made with vegan leather and recycled materials.',
-    images: ['product-2-a', 'product-2-b', 'product-2-c'],
-    stock: 25,
-    rating: 4.8,
-    reviews: 250,
-  },
-  {
-    id: '3',
-    name: 'Classic Street Tee',
-    brand: 'UrbanWear',
-    category: 't-shirts',
-    subcategory: "men's",
-    price: 29.99,
-    sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Charcoal Grey', 'Crisp White'],
-    description:
-      'A timeless soft-touch t-shirt for everyday wear. Crafted from 100% premium cotton for ultimate comfort.',
-    images: ['product-3-a', 'product-3-b', 'product-3-c'],
-    stock: 50,
-    rating: 4.7,
-    reviews: 300,
-  },
-  {
-    id: '4',
-    name: 'Sustainable Denim Jeans',
-    brand: 'GreenJeans',
-    category: 'jeans',
-    subcategory: "men's",
-    price: 119.99,
-    sizes: ['30', '32', '34', '36'],
-    colors: ['Classic Blue'],
-    description:
-      'Eco-friendly jeans that don’t compromise on style. Made with organic cotton and recycled polyester.',
-    images: ['product-4-a', 'product-4-b', 'product-4-c'],
-    stock: 20,
-    rating: 4.6,
-    reviews: 180,
-  },
-  {
-    id: '5',
-    name: 'Lilac Dream Blouse',
-    brand: 'EcoThreads',
-    category: 'tops',
-    subcategory: "women's",
-    price: 45.0,
-    sizes: ['XS', 'S', 'M', 'L'],
-    colors: ['Soft Lilac'],
-    description: 'A beautiful and elegant blouse with puff sleeves, perfect for a chic, modern look.',
-    images: ['product-5-a', 'product-5-b', 'product-5-c'],
-    stock: 30,
-    rating: 4.9,
-    reviews: 95,
-  },
-  {
-    id: '6',
-    name: 'Urban Explorer Boots',
-    brand: 'SoleMates',
-    category: 'shoes',
-    subcategory: "men's",
-    price: 149.99,
-    sizes: ['8', '9', '10', '11', '12'],
-    colors: ['Charcoal Grey'],
-    description:
-      'Durable and stylish boots for the modern man. Built to last with sustainable materials and superior craftsmanship.',
-    images: ['product-6-a', 'product-6-b', 'product-6-c'],
-    stock: 18,
-    rating: 4.8,
-    reviews: 210,
-  },
-  {
-    id: '7',
-    name: "Men's Linen Shirt",
-    brand: 'UrbanWear',
-    category: 'shirts',
-    subcategory: "men's",
-    price: 69.99,
-    sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Beige', 'White'],
-    description: 'A breathable and stylish linen shirt, perfect for warm weather. Made from 100% organic linen for a comfortable and relaxed fit.',
-    images: ['product-7-a', 'product-7-b', 'product-7-c'],
-    stock: 22,
-    rating: 4.7,
-    reviews: 88,
-  },
-];
+export const products: Product[] = []; // This will be fetched from Sanity
 
 export const categories: Category[] = [
   { name: 'Dresses', image: 'category-4' },
@@ -147,3 +35,11 @@ export const testimonials: Testimonial[] = [
     avatar: 'avatar-4',
   },
 ];
+
+export const navLinks: NavLink[] = [
+    { href: '/#new-arrivals', label: 'New Arrivals' },
+    { href: '/#women', label: 'Women' },
+    { href: '/#men', label: 'Men' },
+    { href: '/#shoes', label: 'Shoes' },
+    { href: '/#sustainable', label: 'Sustainable' },
+  ];

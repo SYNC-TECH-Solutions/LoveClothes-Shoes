@@ -10,7 +10,6 @@ export type Product = {
   sizes: string[];
   colors: string[];
   description: string;
-  images: string[]; // array of image IDs from placeholder-images.json
   stock: number;
   rating: number;
   reviews: number;
@@ -34,4 +33,9 @@ export type Testimonial = {
   handle: string;
   text: string;
   avatar: string; // image ID from placeholder-images.json
+};
+
+export type NavLink = {
+  href: string;
+  label: string;
 };
