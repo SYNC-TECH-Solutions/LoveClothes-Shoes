@@ -22,55 +22,51 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
-        <div className="mr-4 hidden md:flex">
-          <Logo variant="light" />
-        </div>
-
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-              <SheetHeader className="mb-8">
-                <Logo variant="dark" />
-              </SheetHeader>
-              <nav className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="block px-2 py-1 text-lg font-medium text-foreground hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-
-        <div className="flex flex-1 items-center justify-between gap-2 md:justify-center">
-          <div className="md:hidden">
-            <Logo variant="light" />
+        <div className="flex flex-1 items-center gap-2">
+           <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+                <SheetHeader className="mb-8">
+                  <Logo />
+                </SheetHeader>
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="block px-2 py-1 text-lg font-medium text-foreground hover:text-primary"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
-          <nav className="hidden items-center gap-6 text-sm md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center">
+             <Logo />
+          </div>
         </div>
 
-        <div className="flex items-center justify-end gap-2">
+        <nav className="hidden items-center gap-6 text-sm md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        
+        <div className="flex flex-1 items-center justify-end gap-2">
           <VisualSearch />
           <Button variant="ghost" size="icon">
             <User className="h-5 w-5" />

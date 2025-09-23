@@ -24,11 +24,11 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg">
             <Image 
-              src="https://picsum.photos/seed/about-us/800/600" 
-              alt="Diverse group of stylish people"
+              src="/logo.png" 
+              alt="Love Clothes & Shoes Logo"
               fill
-              className="object-cover"
-              data-ai-hint="stylish people"
+              className="object-contain p-8"
+              data-ai-hint="logo"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>

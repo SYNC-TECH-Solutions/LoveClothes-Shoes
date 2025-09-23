@@ -21,7 +21,7 @@ const valueProps = [
 export default function ValueProps() {
   return (
     <section className="bg-secondary">
-      <div className="container max-w-7xl py-12">
+      <div className="container max-w-7xl py-12 px-4 md:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {valueProps.map((prop) => (
             <div key={prop.title} className="flex items-start gap-4">
