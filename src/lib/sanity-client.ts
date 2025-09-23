@@ -3,7 +3,7 @@ import { createClient } from '@sanity/client'
 export const sanityClient = createClient({
   projectId: 'v6a19qus',
   dataset: 'production',
-  useCdn: true, // `false` if you want to ensure fresh data
+  useCdn: false, // `false` if you want to ensure fresh data
   apiVersion: '2024-07-16', // use a UTC date in YYYY-MM-DD format
 })
 
