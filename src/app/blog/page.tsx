@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/lib/sanity-client';
+import { getAllLocalPosts } from '@/lib/blog-content';
 import type { Post } from '@/lib/types';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-    const posts: Post[] = await getAllPosts();
+    const posts: Post[] = await getAllLocalPosts();
 
     return (
         <div className="bg-background text-foreground">
@@ -27,7 +27,7 @@ export default async function BlogPage() {
                 {posts.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map(post => (
-                            <Link href={`/blog/${post.slug}`} key={post._id} legacyBehavior>
+                            <Link href={`/blog/${post.slug}`} key={post.slug} legacyBehavior>
                                 <a className="group block">
                                     <Card className="flex flex-col h-full overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-2xl">
                                         {post.mainImageUrl && (

@@ -1,8 +1,7 @@
-import { getPostBySlug } from '@/lib/sanity-client'
+import { getLocalPostBySlug } from '@/lib/blog-content';
 import { notFound } from 'next/navigation'
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { PortableText } from '@portabletext/react';
 import { format } from 'date-fns';
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const post = await getPostBySlug(params.slug);
+    const post = await getLocalPostBySlug(params.slug);
 
     if (!post) {
         return {
@@ -36,34 +35,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
+// Simple component to render the local blog body
+const BlogBody = ({ body }: { body: { _type: string; children: { text: string }[] }[] }) => {
+    return (
+        <div>
+            {body.map((block, index) => {
+                const text = block.children.map(child => child.text).join('');
+                switch (block._type) {
+                    case 'h2':
+                        return <h2 key={index} className="font-headline text-3xl font-bold mt-10 mb-4">{text}</h2>;
+                    case 'blockquote':
+                        return <blockquote key={index} className="border-l-4 border-primary pl-6 italic my-8 text-xl text-foreground/80">{text}</blockquote>;
+                    default:
+                        return <p key={index} className="mb-6 text-lg leading-relaxed text-foreground/90">{text}</p>;
+                }
+            })}
+        </div>
+    );
+};
+
+
 export default async function BlogPostPage({ params }: Props) {
-    const post = await getPostBySlug(params.slug);
+    const post = await getLocalPostBySlug(params.slug);
 
     if (!post) {
         notFound();
-    }
-    
-    const components = {
-        block: {
-            h2: ({children}: any) => <h2 className="font-headline text-3xl font-bold mt-10 mb-4">{children}</h2>,
-            h3: ({children}: any) => <h3 className="font-headline text-2xl font-semibold mt-8 mb-3">{children}</h3>,
-            normal: ({children}: any) => <p className="mb-6 text-lg leading-relaxed text-foreground/90">{children}</p>,
-            blockquote: ({children}: any) => <blockquote className="border-l-4 border-primary pl-6 italic my-8 text-xl text-foreground/80">{children}</blockquote>,
-        },
-        marks: {
-            link: ({value, children}: any) => {
-                const target = (value?.href || '').startsWith('http') ? '_blank' : undefined
-                return (
-                    <a href={value?.href} target={target} rel={target === '_blank' ? 'noindex nofollow' : ''} className="text-primary hover:underline font-semibold">
-                    {children}
-                    </a>
-                )
-            },
-        },
-        list: {
-            bullet: ({children}: any) => <ul className="list-disc list-inside space-y-3 my-6 pl-4 text-lg text-foreground/90">{children}</ul>,
-            number: ({children}: any) => <ol className="list-decimal list-inside space-y-3 my-6 pl-4 text-lg text-foreground/90">{children}</ol>,
-        }
     }
 
     return (
@@ -88,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
                     )}
                    
                     <div className="prose dark:prose-invert prose-lg max-w-none mx-auto">
-                         <PortableText value={post.body} components={components} />
+                         <BlogBody body={post.body as any} />
                     </div>
 
                 </article>
