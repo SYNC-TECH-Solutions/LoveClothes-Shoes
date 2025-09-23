@@ -20,15 +20,17 @@ function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 2859 3333"
-            shapeRendering="geometricPrecision"
-            textRendering="geometricPrecision"
-            imageRendering="optimizeQuality"
-            fillRule="evenodd"
-            clipRule="evenodd"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             {...props}
         >
-            <path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"/>
+            <path d="M16.1 4.7a5.9 5.9 0 0 1 5.9 5.9v5.8a2 2 0 0 1-2 2h-1.5a1.5 1.5 0 1 0 0 3h1.5a5 5 0 0 0 5-5v-5.8a8.9 8.9 0 0 0-8.9-8.9h-1.5a1.5 1.5 0 1 0 0 3h1.5Z" />
+            <path d="M12 7.1a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+            <path d="M8.2 4.7A4.9 4.9 0 0 1 11 2a4.9 4.9 0 0 1 3.8 2.7" />
         </svg>
     )
 }
