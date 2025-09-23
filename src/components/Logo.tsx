@@ -5,7 +5,7 @@ interface LogoProps {
   variant?: 'light' | 'dark';
 }
 
-export function Logo({ variant = 'light' }: LogoProps) {
+export function Logo({ variant = 'dark' }: LogoProps) {
   const logoSrc = variant === 'light' ? '/logowrite.png' : '/logo.png';
 
   return (
