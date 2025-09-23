@@ -10,10 +10,9 @@ export const posts = [
         mainImage: {
             _type: 'image',
             alt: 'Person holding a green leaf in front of a rack of clothes',
-            // This is a placeholder; in a real setup, you'd upload this to Sanity
             asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-f22214950451a547c827d05b766141c21e0a1b5c-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-20T10:00:00Z',
@@ -70,8 +69,8 @@ export const posts = [
             _type: 'image',
             alt: 'A stylish person wearing a cozy brown sweater and jeans in autumn.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-a78b54930b5399583b27629553641d1a6bb18579-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-18T10:00:00Z',
@@ -108,8 +107,8 @@ export const posts = [
             _type: 'image',
             alt: 'A stack of folded denim jeans in various shades of blue.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-e818b628469d7a264a938c352a1e0657e38f9215-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-15T10:00:00Z',
@@ -146,8 +145,8 @@ export const posts = [
             _type: 'image',
             alt: 'A collection of stylish accessories including a watch, sunglasses, and a necklace on a flat surface.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-d9036f0119339665c71e19416560411311033d59-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-12T10:00:00Z',
@@ -172,8 +171,8 @@ export const posts = [
             _type: 'image',
             alt: 'A classic leather jacket hanging on a rack.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-3d924151a60037a5033c467a9202613945415177-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-10T10:00:00Z',
@@ -198,8 +197,8 @@ export const posts = [
             _type: 'image',
             alt: 'A person carefully cleaning a white sneaker with a brush.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-0518349d44320f7e4f9b3b123d5a23075583597c-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-08T10:00:00Z',
@@ -224,8 +223,8 @@ export const posts = [
             _type: 'image',
             alt: 'A person wearing a stylish all-beige outfit.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-4299491a566580f489f783637494488316279fbd-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-05T10:00:00Z',
@@ -250,8 +249,8 @@ export const posts = [
             _type: 'image',
             alt: 'A clothing tag that says "Made with love and recycled materials".',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-c6c74b5903b41b52781442116035174524c520a6-800x1200-jpg'
             }
         },
         publishedAt: '2024-07-02T10:00:00Z',
@@ -276,8 +275,8 @@ export const posts = [
             _type: 'image',
             alt: 'A person sitting at a desk in a comfortable but stylish sweater.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-a8e0d425719379893952f4477b5a837c0411a76f-800x1200-jpg'
             }
         },
         publishedAt: '2024-06-29T10:00:00Z',
@@ -302,8 +301,8 @@ export const posts = [
             _type: 'image',
             alt: 'A minimalist clothing rack with a few essential, neutral-colored garments.',
              asset: {
-                _ref: 'image-c8a8d8e0f9b0a1a0a0a0a0a0c0a0a0a0a0a0a0a0-1200x800-jpg',
-                _type: 'reference'
+                _type: 'reference',
+                _ref: 'image-8a6a4b1b3b2c1c0c0c0c0c0c0c0c0c0c0c0c0c0c-800x1200-jpg'
             }
         },
         publishedAt: '2024-06-25T10:00:00Z',
