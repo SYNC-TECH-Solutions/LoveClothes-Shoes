@@ -1,3 +1,214 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-fallback",
+      "description": "Fallback hero image",
+      "imageUrl": "https://images.unsplash.com/photo-1553984658-d17e19aa281a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzU4NTk0MDY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion model"
+    },
+    {
+      "id": "product-1-a",
+      "description": "Vibrant Summer Dress front",
+      "imageUrl": "https://images.unsplash.com/photo-1617383619176-593fe8bfcde4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb3JhbCUyMGRyZXNzfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coral dress"
+    },
+    {
+      "id": "product-1-b",
+      "description": "Vibrant Summer Dress side",
+      "imageUrl": "https://images.unsplash.com/photo-1598625873873-52f9aefd7d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzU4NTUwODkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "product-1-c",
+      "description": "Vibrant Summer Dress detail",
+      "imageUrl": "https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc1ODU5MDgxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric texture"
+    },
+    {
+      "id": "product-2-a",
+      "description": "Colorful Kicks side",
+      "imageUrl": "https://images.unsplash.com/photo-1619035193426-572572fa9c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx5ZWxsb3clMjBzbmVha2VyfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yellow sneaker"
+    },
+    {
+      "id": "product-2-b",
+      "description": "Colorful Kicks top",
+      "imageUrl": "https://images.unsplash.com/photo-1654401574155-03442ee73114?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsaWxhYyUyMHNob2VzfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lilac shoes"
+    },
+    {
+      "id": "product-2-c",
+      "description": "Colorful Kicks lifestyle",
+      "imageUrl": "https://images.unsplash.com/photo-1603139439523-f8c95a33c548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjB3YWxraW5nfGVufDB8fHx8MTc1ODYxMTE3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person walking"
+    },
+    {
+      "id": "product-3-a",
+      "description": "Classic Street Tee front",
+      "imageUrl": "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5JTIwdC1zaGlydHxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey t-shirt"
+    },
+    {
+      "id": "product-3-b",
+      "description": "Classic Street Tee back",
+      "imageUrl": "https://images.unsplash.com/photo-1669575903350-9a349b411810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBmYXNoaW9ufGVufDB8fHx8MTc1ODU4NjA4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man fashion"
+    },
+    {
+      "id": "product-3-c",
+      "description": "Classic Street Tee lifestyle",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1562053690-62f7812fd0de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1cmJhbiUyMHN0eWxlfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban style"
+    },
+    {
+      "id": "product-4-a",
+      "description": "Sustainable Denim Jeans front",
+      "imageUrl": "https://images.unsplash.com/photo-1604176354204-9268737828e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxibHVlJTIwamVhbnN8ZW58MHx8fHwxNzU4NTkzNDU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blue jeans"
+    },
+    {
+      "id": "product-4-b",
+      "description": "Sustainable Denim Jeans detail",
+      "imageUrl": "https://images.unsplash.com/photo-1631112230741-446762ee05ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW5pbSUyMHRleHR1cmV8ZW58MHx8fHwxNzU4NjM3Nzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "denim texture"
+    },
+    {
+      "id": "product-4-c",
+      "description": "Sustainable Denim Jeans lifestyle",
+      "imageUrl": "https://images.unsplash.com/photo-1619480574926-deeb31e73d95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3Npbmd8ZW58MHx8fHwxNzU4NjA5MTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man posing"
+    },
+    {
+      "id": "product-5-a",
+      "description": "Lilac Dream Blouse front",
+      "imageUrl": "https://images.unsplash.com/photo-1656919267358-4e5da017bb50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWxhYyUyMGJsb3VzZXxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lilac blouse"
+    },
+    {
+      "id": "product-5-b",
+      "description": "Lilac Dream Blouse back",
+      "imageUrl": "https://images.unsplash.com/photo-1627577279474-b87fe8490617?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGZhc2hpb258ZW58MHx8fHwxNzU4NTg2MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman fashion"
+    },
+    {
+      "id": "product-5-c",
+      "description": "Lilac Dream Blouse detail",
+      "imageUrl": "https://images.unsplash.com/photo-1754666057931-c516eeffdafa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzbGVldmUlMjBkZXRhaWx8ZW58MHx8fHwxNzU4NjAyMDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sleeve detail"
+    },
+    {
+      "id": "product-6-a",
+      "description": "Urban Explorer Boots front",
+      "imageUrl": "https://images.unsplash.com/photo-1617456343391-ead32a0324db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncmV5JTIwYm9vdHN8ZW58MHx8fHwxNzU4NjM3Nzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey boots"
+    },
+    {
+      "id": "product-6-b",
+      "description": "Urban Explorer Boots side",
+      "imageUrl": "https://images.unsplash.com/photo-1710632609125-da337a1e1ddd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsZWF0aGVyJTIwYm9vdHN8ZW58MHx8fHwxNzU4NTkyNTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather boots"
+    },
+    {
+      "id": "product-6-c",
+      "description": "Urban Explorer Boots lifestyle",
+      "imageUrl": "https://images.unsplash.com/photo-1723474907224-ef4ab19c21a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwaGlraW5nfGVufDB8fHx8MTc1ODU5ODkyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man hiking"
+    },
+    {
+      "id": "category-1",
+      "description": "New Arrivals category image",
+      "imageUrl": "https://images.unsplash.com/photo-1642792545243-1931577811a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYXNoaW9uJTIwZGlzcGxheXxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion display"
+    },
+    {
+      "id": "category-2",
+      "description": "Bestsellers category image",
+      "imageUrl": "https://images.unsplash.com/photo-1685875018148-6ac6d41b7c4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9wdWxhciUyMGNsb3RoZXN8ZW58MHx8fHwxNzU4NjM3Nzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "popular clothes"
+    },
+    {
+      "id": "category-3",
+      "description": "Sustainable Picks category image",
+      "imageUrl": "https://images.unsplash.com/photo-1593345530459-c611db8881f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBzdXN0YWluYWJpbGl0eXxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature sustainability"
+    },
+    {
+      "id": "category-4",
+      "description": "Dresses category image",
+      "imageUrl": "https://images.unsplash.com/photo-1532675432006-329c6fed7045?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMGRyZXNzfGVufDB8fHx8MTc1ODU5Mzc1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman dress"
+    },
+    {
+      "id": "category-5",
+      "description": "Shoes category image",
+      "imageUrl": "https://images.unsplash.com/photo-1654939438953-58dca903c976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25lYWtlcnMlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sneakers collection"
+    },
+    {
+      "id": "category-6",
+      "description": "Tops category image",
+      "imageUrl": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxibG91c2VzJTIwc2hpcnRzfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blouses shirts"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Avatar for Jessica T.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODU1NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Avatar for Mike P.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg1ODI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Avatar for Chloe L.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzU4NTUwODkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "avatar-4",
+      "description": "Avatar for Ben R.",
+      "imageUrl": "https://images.unsplash.com/photo-1562124638-724e13052daf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc1ODU4NDAyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "instagram-1",
+      "description": "Instagram feed image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1692466961215-388485ffd571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXNoaW9uJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion lifestyle"
+    },
+    {
+      "id": "instagram-2",
+      "description": "Instagram feed image 2",
+      "imageUrl": "https://images.unsplash.com/photo-1638260753148-d0316920e0af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1cmJhbiUyMGZhc2hpb258ZW58MHx8fHwxNzU4NjAxNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban fashion"
+    },
+    {
+      "id": "instagram-3",
+      "description": "Instagram feed image 3",
+      "imageUrl": "https://images.unsplash.com/photo-1624280217162-466a76286d0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWFjaCUyMG91dGZpdHxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach outfit"
+    },
+    {
+      "id": "instagram-4",
+      "description": "Instagram feed image 4",
+      "imageUrl": "https://images.unsplash.com/photo-1580893707343-271b5a3f9f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbmVha2VyJTIwY2xvc2V1cHxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sneaker closeup"
+    },
+    {
+      "id": "instagram-5",
+      "description": "Instagram feed image 5",
+      "imageUrl": "https://images.unsplash.com/photo-1578458329607-534298aebc4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdW1tZXIlMjB2aWJlc3xlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "summer vibes"
+    },
+    {
+      "id": "instagram-6",
+      "description": "Instagram feed image 6",
+      "imageUrl": "https://images.unsplash.com/photo-1663664082442-d7ba41774001?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmcmllbmRzJTIwZmFzaGlvbnxlbnwwfHx8fDE3NTg2Mzc3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "friends fashion"
+    }
+  ]
 }
