@@ -28,7 +28,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
         <div className="mr-4 hidden md:flex">
-          <Logo variant="dark" />
+          <Logo variant="light" />
         </div>
 
         <div className="md:hidden">
@@ -60,7 +60,7 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-between gap-2 md:justify-center">
           <div className="md:hidden">
-            <Logo variant="dark" />
+            <Logo variant="light" />
           </div>
           <nav className="hidden items-center gap-6 text-sm md:flex">
             {navLinks.map((link) => (
