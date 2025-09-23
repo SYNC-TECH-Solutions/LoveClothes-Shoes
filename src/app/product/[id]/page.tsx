@@ -79,7 +79,8 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
   const handleBuyNow = () => {
     // In a real affiliate site, you would get the affiliate link for the product.
-    // This could come from your Sanity data or another source.
+    // This now comes from your Sanity data. If it doesn't exist, it falls back
+    // to a Google search for the product name.
     const affiliateLink = product.affiliateUrl || 'https://www.google.com/search?q=' + encodeURIComponent(product.name);
     window.open(affiliateLink, '_blank');
   };

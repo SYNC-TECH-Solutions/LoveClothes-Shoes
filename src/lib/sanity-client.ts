@@ -23,7 +23,8 @@ export async function getAllProducts() {
     "mainImageHint": mainImage.alt,
     "hoverImageUrl": hoverImage.asset->url,
     "hoverImageHint": hoverImage.alt,
-    "imageUrls": images[].asset->{ "url": url, "hint": alt }
+    "imageUrls": images[].asset->{ "url": url, "hint": alt },
+    affiliateUrl
   }`);
   return products.map((p: any) => ({...p, id: p._id}));
 }
@@ -46,7 +47,8 @@ export async function getProductById(id: string) {
     "mainImageHint": mainImage.alt,
     "hoverImageUrl": hoverImage.asset->url,
     "hoverImageHint": hoverImage.alt,
-    "imageUrls": images[].asset->{ "url": url, "hint": alt }
+    "imageUrls": images[].asset->{ "url": url, "hint": alt },
+    affiliateUrl
   }`, { id });
 
   if (!product) {
