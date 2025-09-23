@@ -21,6 +21,7 @@ export type Product = {
     url: string;
     hint: string;
   }[];
+  affiliateUrl?: string;
 };
 
 export type Category = {

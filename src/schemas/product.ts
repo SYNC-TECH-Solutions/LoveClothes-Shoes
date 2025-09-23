@@ -25,6 +25,11 @@ export default defineType({
       title: 'Sale Price',
       type: 'number',
     }),
+     defineField({
+      name: 'affiliateUrl',
+      title: 'Affiliate URL',
+      type: 'url',
+    }),
     defineField({
         name: 'mainImage',
         title: 'Main image',

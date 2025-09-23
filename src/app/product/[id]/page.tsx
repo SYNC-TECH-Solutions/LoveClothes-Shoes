@@ -8,8 +8,6 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Truck, Loader2 } from 'lucide-react';
 import Recommendations from '@/components/home/Recommendations';
 import type { Product } from '@/lib/types';
-import { useCart } from '@/context/CartContext';
-import { useToast } from '@/hooks/use-toast';
 import type { Metadata } from 'next';
 
 // Although this is a client component, this function can be used by Next.js
@@ -44,8 +42,6 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const { addToCart } = useCart();
-  const { toast } = useToast();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -81,16 +77,11 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
     return notFound();
   }
 
-  const handleAddToCart = () => {
-    if (!selectedSize) {
-      toast({
-        variant: "destructive",
-        title: "Please select a size",
-        description: "You must choose a size before adding to the cart.",
-      });
-      return;
-    }
-    addToCart(product, selectedSize);
+  const handleBuyNow = () => {
+    // In a real affiliate site, you would get the affiliate link for the product.
+    // This could come from your Sanity data or another source.
+    const affiliateLink = product.affiliateUrl || 'https://www.google.com/search?q=' + encodeURIComponent(product.name);
+    window.open(affiliateLink, '_blank');
   };
 
   const hasSale = product.salePrice && product.salePrice < product.price;
@@ -209,11 +200,11 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             )}
 
 
-            <Button size="lg" className="w-full" onClick={handleAddToCart}>Add to Cart</Button>
+            <Button size="lg" className="w-full" onClick={handleBuyNow}>Buy Now</Button>
             
             <div className="flex items-center gap-3 text-sm text-foreground/60 border-t pt-6">
                 <Truck className="h-5 w-5" />
-                <span>Free shipping on many orders over $75 via our partners.</span>
+                <span>Shipping and returns handled by our trusted partners.</span>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import {
   Heart,
   Menu,
   Search,
-  ShoppingCart,
   User,
 } from 'lucide-react';
 import { Logo } from '@/components/Logo';
@@ -17,13 +16,9 @@ import {
 } from '@/components/ui/sheet';
 import { navLinks } from '@/lib/data';
 import VisualSearch from '../search/VisualSearch';
-import { useCart } from '@/context/CartContext';
-import CartSheet from '../cart/CartSheet';
+
 
 export function Header() {
-  const { cart } = useCart();
-  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
@@ -85,17 +80,6 @@ export function Header() {
             <Heart className="h-5 w-5" />
             <span className="sr-only">Wishlist</span>
           </Button>
-          <CartSheet>
-            <Button variant="ghost" size="icon" className="relative">
-              {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-                  {itemCount}
-                </span>
-              )}
-              <ShoppingCart className="h-5 w-5" />
-              <span className="sr-only">Shopping Cart</span>
-            </Button>
-          </CartSheet>
         </div>
       </div>
     </header>
