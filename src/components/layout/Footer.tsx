@@ -7,7 +7,7 @@ import * as z from 'zod';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Github, Twitter, Instagram } from 'lucide-react';
+import { Twitter, Instagram, Facebook } from 'lucide-react';
 import { subscribeToNewsletter } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
@@ -15,6 +15,25 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 const newsletterFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }),
 });
+
+function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            {...props}
+        >
+            <path d="M16.1 4.7a5.9 5.9 0 0 1 5.9 5.9v5.8a2 2 0 0 1-2 2h-1.5a1.5 1.5 0 1 0 0 3h1.5a5 5 0 0 0 5-5v-5.8a8.9 8.9 0 0 0-8.9-8.9h-1.6a1.5 1.5 0 1 0 0 3h1.6z" />
+            <path d="M12 7.1a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+            <path d="M8.2 4.7A4.9 4.9 0 0 1 11 2a4.9 4.9 0 0 1 3.8 2.7" />
+        </svg>
+    )
+}
 
 export function Footer() {
   const { toast } = useToast();
@@ -51,17 +70,29 @@ export function Footer() {
             Your curated guide to the best in style. We earn a commission on qualifying purchases.
           </p>
           <div className="flex gap-2">
-            <Button variant="ghost" size="icon">
-              <Twitter className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="#">
+                    <TikTokIcon className="h-5 w-5" />
+                    <span className="sr-only">TikTok</span>
+                </Link>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Instagram className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="#">
+                    <Twitter className="h-5 w-5" />
+                    <span className="sr-only">Twitter X</span>
+                </Link>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="#">
+                    <Instagram className="h-5 w-5" />
+                    <span className="sr-only">Instagram</span>
+                </Link>
+            </Button>
+             <Button variant="ghost" size="icon" asChild>
+                <Link href="#">
+                    <Facebook className="h-5 w-5" />
+                    <span className="sr-only">Facebook</span>
+                </Link>
             </Button>
           </div>
         </div>
@@ -122,6 +153,7 @@ export function Footer() {
       </div>
       <div className="container max-w-7xl mt-8 pt-8 border-t border-border/40 text-center text-sm text-foreground/60">
         <p>&copy; {new Date().getFullYear()} Love Clothes & Shoes. All rights reserved.</p>
+        <p>Built by <a href="https://www.synctech.ie" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">SYNC TECH</a></p>
       </div>
     </footer>
   );
