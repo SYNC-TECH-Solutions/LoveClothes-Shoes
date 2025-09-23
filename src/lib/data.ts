@@ -1,3 +1,4 @@
+
 import type { Product, Category, Testimonial } from '@/lib/types';
 
 export const products: Product[] = [
@@ -97,22 +98,34 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 210,
   },
+  {
+    id: '7',
+    name: "Men's Linen Shirt",
+    brand: 'UrbanWear',
+    category: 'shirts',
+    subcategory: "men's",
+    price: 69.99,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Beige', 'White'],
+    description: 'A breathable and stylish linen shirt, perfect for warm weather. Made from 100% organic linen for a comfortable and relaxed fit.',
+    images: ['product-7-a', 'product-7-b', 'product-7-c'],
+    stock: 22,
+    rating: 4.7,
+    reviews: 88,
+  },
 ];
 
 export const categories: Category[] = [
-  { name: 'New Arrivals', image: 'category-1' },
-  { name: 'Bestsellers', image: 'category-2' },
-  { name: 'Sustainable Picks', image: 'category-3' },
   { name: 'Dresses', image: 'category-4' },
   { name: 'Shoes', image: 'category-5' },
-  { name: 'Tops', image: 'category-6' },
+  { name: 'T-Shirts', image: 'product-3-a' },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     name: 'Jessica T.',
     handle: '@jessicat',
-    text: "I'm in love with my new dress from Style Heart! The quality is amazing, and I got so many compliments. Plus, their commitment to sustainability is a huge bonus!",
+    text: "I'm in love with my new dress from Love Clothes & Shoes! The quality is amazing, and I got so many compliments. Plus, their commitment to sustainability is a huge bonus!",
     avatar: 'avatar-1',
   },
   {

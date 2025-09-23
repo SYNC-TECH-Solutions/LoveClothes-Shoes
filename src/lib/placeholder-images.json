@@ -115,22 +115,22 @@
       "imageHint": "man hiking"
     },
     {
-      "id": "category-1",
-      "description": "New Arrivals category image",
-      "imageUrl": "https://images.unsplash.com/photo-1642792545243-1931577811a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYXNoaW9uJTIwZGlzcGxheXxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fashion display"
+      "id": "product-7-a",
+      "description": "Men's Linen Shirt front view",
+      "imageUrl": "https://images.unsplash.com/photo-1740711152088-88a009e877bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaW5lbiUyMHNoaXJ0fGVufDB8fHx8MTc1ODU4NjkxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "linen shirt"
     },
     {
-      "id": "category-2",
-      "description": "Bestsellers category image",
-      "imageUrl": "https://images.unsplash.com/photo-1685875018148-6ac6d41b7c4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9wdWxhciUyMGNsb3RoZXN8ZW58MHx8fHwxNzU4NjM3Nzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "popular clothes"
+      "id": "product-7-b",
+      "description": "Men's Linen Shirt detail",
+      "imageUrl": "https://images.unsplash.com/photo-1528459105426-b9548367069b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmFicmljJTIwdGV4dHVyZXxlbnwwfHx8fDE3NTg1OTA4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric texture"
     },
     {
-      "id": "category-3",
-      "description": "Sustainable Picks category image",
-      "imageUrl": "https://images.unsplash.com/photo-1593345530459-c611db8881f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBzdXN0YWluYWJpbGl0eXxlbnwwfHx8fDE3NTg2Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nature sustainability"
+      "id": "product-7-c",
+      "description": "Men's Linen Shirt lifestyle",
+      "imageUrl": "https://images.unsplash.com/photo-1660236502653-f567247598cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzU4NjQzMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man lifestyle"
     },
     {
       "id": "category-4",
@@ -143,12 +143,6 @@
       "description": "Shoes category image",
       "imageUrl": "https://images.unsplash.com/photo-1654939438953-58dca903c976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25lYWtlcnMlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sneakers collection"
-    },
-    {
-      "id": "category-6",
-      "description": "Tops category image",
-      "imageUrl": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxibG91c2VzJTIwc2hpcnRzfGVufDB8fHx8MTc1ODYzNzc5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "blouses shirts"
     },
     {
       "id": "avatar-1",
