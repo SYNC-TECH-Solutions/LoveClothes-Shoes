@@ -1,20 +1,19 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { products } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { getProductById } from '@/lib/sanity-client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Truck } from 'lucide-react';
 import Recommendations from '@/components/home/Recommendations';
+import type { Product } from '@/lib/types';
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const product = products.find((p) => p.id === params.id);
+export default async function ProductDetailPage({ params }: { params: { id: string } }) {
+  const product: Product = await getProductById(params.id);
 
   if (!product) {
     notFound();
   }
 
-  const mainImage = PlaceHolderImages.find((img) => img.id === product.images[0]);
   const hasSale = product.salePrice && product.salePrice < product.price;
 
   return (
@@ -24,30 +23,29 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           {/* Product Images */}
           <div className="flex flex-col gap-4">
             <div className="relative aspect-square w-full overflow-hidden rounded-lg border">
-              {mainImage && (
+              {product.mainImageUrl && (
                 <Image
-                  src={mainImage.imageUrl}
+                  src={product.mainImageUrl}
                   alt={product.name}
                   fill
                   className="object-cover"
-                  data-ai-hint={mainImage.imageHint}
+                  data-ai-hint={product.mainImageHint}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               )}
             </div>
             <div className="grid grid-cols-3 gap-4">
-              {product.images.slice(0, 3).map((imageId, index) => {
-                const image = PlaceHolderImages.find((img) => img.id === imageId);
+              {product.imageUrls?.slice(0, 3).map((image, index) => {
                 return (
                   image && (
                     <div key={index} className="relative aspect-square w-full overflow-hidden rounded-lg border">
                       <Image
-                        src={image.imageUrl}
+                        src={image.url}
                         alt={`${product.name} - view ${index + 1}`}
                         fill
                         className="object-cover"
-                        data-ai-hint={image.imageHint}
+                        data-ai-hint={image.hint}
                         sizes="33vw"
                       />
                     </div>
@@ -93,7 +91,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             <div>
               <h3 className="text-sm font-semibold mb-2">Size</h3>
               <div className="flex flex-wrap gap-2">
-                {product.sizes.map((size) => (
+                {product.sizes?.map((size) => (
                   <Button key={size} variant="outline" size="sm" className="w-16">
                     {size}
                   </Button>
@@ -105,7 +103,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             <div>
                 <h3 className="text-sm font-semibold mb-2">Color</h3>
                 <div className="flex flex-wrap gap-3">
-                    {product.colors.map((color) => (
+                    {product.colors?.map((color) => (
                     <button key={color} className="h-8 w-8 rounded-full border-2 border-transparent ring-2 ring-offset-2 ring-offset-background focus:ring-ring focus:border-foreground"
                         style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}>
                         <span className="sr-only">{color}</span>

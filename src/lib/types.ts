@@ -1,4 +1,5 @@
 export type Product = {
+  _id: string;
   id: string;
   name: string;
   brand: string;
@@ -13,6 +14,14 @@ export type Product = {
   stock: number;
   rating: number;
   reviews: number;
+  mainImageUrl: string;
+  mainImageHint: string;
+  hoverImageUrl: string;
+  hoverImageHint: string;
+  imageUrls: {
+    url: string;
+    hint: string;
+  }[];
 };
 
 export type Category = {

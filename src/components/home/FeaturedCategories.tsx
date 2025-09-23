@@ -1,31 +1,32 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { categories } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
-import { products } from '@/lib/data';
-
-function getCategoryImage(categoryName: string) {
-  // Find a product in that category
-  const productInCategory = products.find(
-    p => p.category.toLowerCase() === categoryName.toLowerCase()
-  );
-  if (productInCategory && productInCategory.images.length > 0) {
-    // Find the placeholder image for that product
-    return PlaceHolderImages.find(img => img.id === productInCategory.images[0]);
-  }
-  // Fallback to a generic category image if no product is found
-  return PlaceHolderImages.find(img => img.id.startsWith('category-'));
-}
+import { getAllProducts } from '@/lib/sanity-client';
+import type { Product } from '@/lib/types';
 
 
-export default function FeaturedCategories() {
+export default async function FeaturedCategories() {
+  const products: Product[] = await getAllProducts();
   const displayedCategories = [
     { name: 'Dresses' },
     { name: 'Shoes' },
     { name: 'T-Shirts' },
   ]; 
+
+  function getCategoryImage(categoryName: string) {
+    const productInCategory = products.find(
+      p => p.category?.toLowerCase() === categoryName.toLowerCase()
+    );
+    if (productInCategory && productInCategory.mainImageUrl) {
+      return { imageUrl: productInCategory.mainImageUrl, imageHint: productInCategory.mainImageHint };
+    }
+    // Fallback to a generic category image if no product is found
+    const fallbackImage = PlaceHolderImages.find(img => img.id.startsWith('category-'));
+    return { imageUrl: fallbackImage?.imageUrl ?? '', imageHint: fallbackImage?.imageHint ?? '' };
+  }
+
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
@@ -45,7 +46,7 @@ export default function FeaturedCategories() {
             return (
               <Link href="#" key={category.name}>
                 <Card className="group relative h-96 overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-2xl">
-                  {image && (
+                  {image && image.imageUrl && (
                     <Image
                       src={image.imageUrl}
                       alt={category.name}

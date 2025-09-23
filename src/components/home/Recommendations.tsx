@@ -1,5 +1,4 @@
-import { getProductRecommendations } from '@/ai/flows/ai-powered-product-recommendations';
-import { products } from '@/lib/data';
+import { getAllProducts } from '@/lib/sanity-client';
 import ProductGrid from '@/components/products/ProductGrid';
 import type { Product } from '@/lib/types';
 
@@ -7,28 +6,13 @@ export default async function Recommendations() {
   let recommendedProducts: Product[] = [];
 
   try {
-    const result = await getProductRecommendations({
-      userHistory: '1,5', // Mock history: viewed Vibrant Summer Dress and Lilac Dream Blouse
-      userPreferences: 'sustainable, dresses, colorful', // Mock preferences
-    });
-
-    if (result.recommendations) {
-      const recommendedIds = result.recommendations
-        .split(',')
-        .map(id => id.trim());
-      recommendedProducts = products.filter(p =>
-        recommendedIds.includes(p.id)
-      );
-    }
+    // In a real app, you'd use the AI flow. For now, we'll fetch all products.
+    const allProducts = await getAllProducts();
+    recommendedProducts = allProducts.slice(0, 4); // Take first 4 as recommendations for now
+  
   } catch (error) {
     console.error('Error fetching product recommendations:', error);
-    // Fallback to showing first 4 products as a generic "Featured"
-    recommendedProducts = products.slice(0, 4);
-  }
-
-  // Ensure we have something to show, but not more than 4
-  if (recommendedProducts.length === 0) {
-    recommendedProducts = products.slice(0, 4);
+    recommendedProducts = [];
   }
 
   return (
@@ -39,10 +23,10 @@ export default async function Recommendations() {
             Just For You
           </h2>
           <p className="mt-2 max-w-2xl mx-auto text-lg text-foreground/60">
-            AI-powered picks based on your style.
+            Our latest collection.
           </p>
         </div>
-        <ProductGrid products={recommendedProducts.slice(0, 4)} />
+        <ProductGrid products={recommendedProducts} />
       </div>
     </section>
   );

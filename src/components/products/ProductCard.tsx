@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -10,36 +9,29 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const mainImage = PlaceHolderImages.find(
-    (img) => img.id === product.images[0]
-  );
-  const hoverImage = PlaceHolderImages.find(
-    (img) => img.id === product.images[1]
-  );
-
   const hasSale = product.salePrice && product.salePrice < product.price;
 
   return (
-    <Link href={`/product/${product.id}`} className="group">
+    <Link href={`/product/${product._id}`} className="group">
       <Card className="overflow-hidden h-full flex flex-col">
         <div className="relative aspect-[3/4] overflow-hidden">
-          {mainImage && (
+          {product.mainImageUrl && (
             <Image
-              src={mainImage.imageUrl}
+              src={product.mainImageUrl}
               alt={product.name}
               fill
               className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-              data-ai-hint={mainImage.imageHint}
+              data-ai-hint={product.mainImageHint}
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
             />
           )}
-          {hoverImage && (
+          {product.hoverImageUrl && (
             <Image
-              src={hoverImage.imageUrl}
+              src={product.hoverImageUrl}
               alt={`${product.name} (hover)`}
               fill
               className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              data-ai-hint={hoverImage.imageHint}
+              data-ai-hint={product.hoverImageHint}
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
             />
           )}
