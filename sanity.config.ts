@@ -3,18 +3,13 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './src/schemas'
 
-// This can be used to populate sample data
+// This file provides sample blog posts to populate Sanity.
 import { posts } from './src/lib/blog-posts'
-const createIfNotExists = (doc: any) => {
-    return {
-        _type: 'document',
-        _id: doc._id,
-        ...doc,
-    };
-}
+
 const createPosts = async (client: any) => {
     const transaction = client.transaction();
     posts.forEach(post => {
+        // Use the built-in createIfNotExists method directly on the transaction
         transaction.createIfNotExists(post);
     });
     await transaction.commit();
