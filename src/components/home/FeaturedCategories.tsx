@@ -32,7 +32,7 @@ export default async function FeaturedCategories() {
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container max-w-7xl px-4 md:px-8">
         <div className="mb-8 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tight">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight">
             Shop by Category
           </h2>
           <p className="mt-2 max-w-2xl mx-auto text-lg text-foreground/60">
@@ -58,7 +58,7 @@ export default async function FeaturedCategories() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <CardHeader className="absolute bottom-0 w-full text-white">
-                    <CardTitle className="font-headline text-3xl font-bold flex items-center justify-between">
+                    <CardTitle className="font-headline text-2xl md:text-3xl font-bold flex items-center justify-between">
                       <span>{category.name}</span>
                       <ArrowRight className="h-6 w-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </CardTitle>

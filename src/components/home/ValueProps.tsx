@@ -32,7 +32,7 @@ export default function ValueProps() {
               </div>
               <div>
                 <h3 className="text-lg font-headline font-semibold">{prop.title}</h3>
-                <p className="mt-1 text-sm text-foreground/60">
+                <p className="mt-1 text-base text-foreground/60">
                   {prop.description}
                 </p>
               </div>

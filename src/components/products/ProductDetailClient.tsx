@@ -77,17 +77,17 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               </div>
             </div>
 
-            <p className="text-foreground/80">{product.description}</p>
+            <p className="text-base md:text-lg text-foreground/80">{product.description}</p>
             
             <div>
                 {hasSale ? (
                 <div className="flex items-baseline gap-3">
-                    <span className="text-3xl font-bold text-destructive">${product.salePrice?.toFixed(2)}</span>
-                    <span className="text-xl text-foreground/60 line-through">${product.price.toFixed(2)}</span>
+                    <span className="text-2xl md:text-3xl font-bold text-destructive">${product.salePrice?.toFixed(2)}</span>
+                    <span className="text-lg md:text-xl text-foreground/60 line-through">${product.price.toFixed(2)}</span>
                     <Badge variant="destructive">SALE</Badge>
                 </div>
                 ) : (
-                <span className="text-3xl font-bold">${product.price.toFixed(2)}</span>
+                <span className="text-2xl md:text-3xl font-bold">${product.price.toFixed(2)}</span>
                 )}
             </div>
 

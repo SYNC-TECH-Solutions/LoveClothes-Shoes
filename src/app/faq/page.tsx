@@ -40,7 +40,7 @@ export default function FAQPage() {
     <div className="bg-background text-foreground">
       <div className="container max-w-4xl py-12 md:py-16 lg:py-20">
         <div className="text-center mb-12">
-            <HelpCircle className="mx-auto h-16 w-16 text-primary mb-4" />
+            <HelpCircle className="mx-auto h-12 w-12 md:h-16 md:w-16 text-primary mb-4" />
             <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Frequently Asked Questions</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 Have questions? We've got answers. Here are some of the most common queries we receive.
@@ -50,7 +50,7 @@ export default function FAQPage() {
         <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
                  <AccordionItem value={`item-${index}`} key={index}>
-                    <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
+                    <AccordionTrigger className="text-md md:text-lg font-semibold text-left hover:no-underline">
                         {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-base text-foreground/80">

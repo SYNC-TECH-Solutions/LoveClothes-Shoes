@@ -42,7 +42,7 @@ export default async function BlogPage() {
                                         </div>
                                     )}
                                     <CardHeader>
-                                        <CardTitle className="font-headline text-2xl group-hover:text-primary transition-colors">{post.title}</CardTitle>
+                                        <CardTitle className="font-headline text-xl md:text-2xl group-hover:text-primary transition-colors">{post.title}</CardTitle>
                                     </CardHeader>
                                     <CardContent className="flex-grow">
                                         <CardDescription>{post.excerpt}</CardDescription>

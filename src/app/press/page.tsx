@@ -33,7 +33,7 @@ export default function PressPage() {
     <div className="bg-background text-foreground">
       <div className="container max-w-5xl py-12 md:py-16 lg:py-20">
         <div className="text-center mb-12">
-            <Newspaper className="mx-auto h-16 w-16 text-primary mb-4" />
+            <Newspaper className="mx-auto h-12 w-12 md:h-16 md:w-16 text-primary mb-4" />
             <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">In The News</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 See what others are saying about our unique approach to curated, sustainable fashion.
@@ -44,7 +44,7 @@ export default function PressPage() {
             {pressMentions.map((mention, index) => (
                 <Card key={index} className="bg-card">
                     <CardHeader>
-                        <CardTitle className="text-2xl font-headline">{mention.title}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl font-headline">{mention.title}</CardTitle>
                         <CardDescription>{mention.publication} - {mention.date}</CardDescription>
                     </CardHeader>
                     <CardContent>

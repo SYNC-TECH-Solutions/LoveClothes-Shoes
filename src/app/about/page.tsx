@@ -40,21 +40,21 @@ export default function AboutPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Target className="h-6 w-6" />
               </div>
-              <h3 className="font-headline text-2xl font-semibold">Our Mission</h3>
+              <h3 className="font-headline text-xl md:text-2xl font-semibold">Our Mission</h3>
               <p className="text-foreground/70">To curate the best in fashion, making style accessible and inspiring confidence in everyone, while promoting sustainable and ethical choices.</p>
             </div>
             <div className="flex flex-col items-center space-y-3 p-6 bg-card rounded-lg shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Eye className="h-6 w-6" />
                 </div>
-              <h3 className="font-headline text-2xl font-semibold">Our Vision</h3>
+              <h3 className="font-headline text-xl md:text-2xl font-semibold">Our Vision</h3>
               <p className="text-foreground/70">To be the most trusted voice in fashion curation, known for our commitment to quality, style, and positive impact on the industry.</p>
             </div>
             <div className="flex flex-col items-center space-y-3 p-6 bg-card rounded-lg shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Users className="h-6 w-6" />
                 </div>
-              <h3 className="font-headline text-2xl font-semibold">Our Community</h3>
+              <h3 className="font-headline text-xl md:text-2xl font-semibold">Our Community</h3>
               <p className="text-foreground/70">We are more than a store; we are a community of fashion lovers, trendsetters, and conscious consumers making a difference together.</p>
             </div>
           </div>
