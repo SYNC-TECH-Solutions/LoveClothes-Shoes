@@ -13,7 +13,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/product/${product._id}`} className="group">
-      <Card className="overflow-hidden h-full flex flex-col">
+      <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg">
         <div className="relative aspect-[3/4] overflow-hidden">
           {product.mainImageUrl && (
             <Image
@@ -36,13 +36,13 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           )}
           {hasSale && (
-            <Badge variant="destructive" className="absolute top-2 left-2">SALE</Badge>
+            <Badge variant="destructive" className="absolute top-3 left-3 z-10">SALE</Badge>
           )}
         </div>
         <CardContent className="p-4 flex-grow flex flex-col justify-between">
           <div>
             <p className="text-sm text-foreground/60">{product.brand}</p>
-            <h3 className="font-semibold mt-1 truncate">{product.name}</h3>
+            <h3 className="font-semibold mt-1 truncate group-hover:text-primary transition-colors">{product.name}</h3>
           </div>
           <div className="mt-2">
             {hasSale ? (

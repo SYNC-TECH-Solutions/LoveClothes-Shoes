@@ -32,7 +32,7 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-                <SheetHeader className="mb-8">
+                <SheetHeader className="mb-8 border-b pb-4">
                   <Logo />
                 </SheetHeader>
                 <nav className="flex flex-col gap-4">
@@ -40,7 +40,7 @@ export function Header() {
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="block px-2 py-1 text-lg font-medium text-foreground hover:text-primary"
+                      className="block px-2 py-1 text-lg font-medium text-foreground hover:text-primary transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -49,7 +49,7 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
              <Logo />
           </div>
         </div>
@@ -59,14 +59,14 @@ export function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+              className="font-medium text-foreground/60 transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
           ))}
         </nav>
         
-        <div className="flex flex-1 items-center justify-end gap-2">
+        <div className="flex flex-1 items-center justify-end gap-1">
           <VisualSearch />
           <Button variant="ghost" size="icon">
             <User className="h-5 w-5" />
