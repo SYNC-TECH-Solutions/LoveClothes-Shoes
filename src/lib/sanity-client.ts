@@ -3,7 +3,7 @@ import { createClient } from '@sanity/client'
 export const sanityClient = createClient({
   projectId: 'v6a19qus',
   dataset: 'production',
-  useCdn: false, // `false` if you want to ensure fresh data
+  useCdn: true, // `false` if you want to ensure fresh data
   apiVersion: '2024-07-16', // use a UTC date in YYYY-MM-DD format
 })
 
@@ -79,7 +79,7 @@ export async function getPostBySlug(slug: string) {
     "mainImageUrl": mainImage.asset->url,
     "mainImageHint": mainImage.alt,
     publishedAt,
-    body,
+body,
     seoTitle,
     seoDescription
   }`, { slug });
