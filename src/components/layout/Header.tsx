@@ -1,11 +1,6 @@
 'use client';
 import Link from 'next/link';
-import {
-  Heart,
-  Menu,
-  Search,
-  User,
-} from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import {
@@ -16,6 +11,7 @@ import {
 } from '@/components/ui/sheet';
 import { navLinks } from '@/lib/data';
 import VisualSearch from '../search/VisualSearch';
+import UserMenu from './UserMenu';
 
 
 export function Header() {
@@ -23,6 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center">
         <div className="flex flex-1 items-center gap-2">
+          {/* Mobile Menu */}
            <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -49,11 +46,11 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="hidden md:flex items-center">
-             <Logo />
-          </div>
+          {/* Logo is now outside the mobile/desktop specific divs */}
+          <Logo />
         </div>
 
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 text-sm md:flex">
           {navLinks.map((link) => (
             <Link
@@ -66,16 +63,10 @@ export function Header() {
           ))}
         </nav>
         
+        {/* Right Side Icons */}
         <div className="flex flex-1 items-center justify-end gap-1">
           <VisualSearch />
-          <Button variant="ghost" size="icon">
-            <User className="h-5 w-5" />
-            <span className="sr-only">My Account</span>
-          </Button>
-          <Button variant="ghost" size="icon">
-            <Heart className="h-5 w-5" />
-            <span className="sr-only">Wishlist</span>
-          </Button>
+          <UserMenu />
         </div>
       </div>
     </header>
